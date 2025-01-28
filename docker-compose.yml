@@ -10,3 +10,5 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - DEEP_SEEK_CHAT_AUTHORIZATION=
+      - PROXY_LIST=${PROXY_LIST:-[]}  # Добавляем переменную с пустым значением по умолчанию
+      - PROXY_TIMEOUT=${PROXY_TIMEOUT:-20000}
