@@ -1,0 +1,22 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/public/welcome.html"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api"
+        }
+    ]
+}

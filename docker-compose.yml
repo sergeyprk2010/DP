@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  deepseek-free-api:
+    container_name: DP
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - TZ=Asia/Shanghai
+      - DEEP_SEEK_CHAT_AUTHORIZATION=
